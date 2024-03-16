@@ -1,0 +1,39 @@
+.subslugcard {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 63px -60px #000000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .background-image {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .border {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    h2 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: white;
+      margin: 10px;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+  }
+}
+
+.subslugcard:hover .background-image {
+  transform: scale(2);
+}

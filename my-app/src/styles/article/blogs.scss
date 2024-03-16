@@ -1,0 +1,281 @@
+.postcard {
+  @apply border relative rounded-md shadow-sm bg-white;
+
+  .img {
+    img {
+      @apply rounded-md w-full h-full;
+    }
+
+    .tag {
+      @apply absolute top-4 right-4 rounded px-2;
+
+      a {
+        @apply text-sm bg-indigo-500 py-1 px-2 rounded text-white capitalize;
+      }
+    }
+
+    .cat {
+      @apply absolute top-4 left-4 rounded px-2 capitalize;
+
+      a {
+        @apply text-sm bg-indigo-500 py-1 px-2 rounded text-white capitalize;
+      }
+    }
+  }
+
+  .content {
+    @apply p-2;
+
+    a {
+      @apply text-xl sm:text-2xl font-semibold inline-block hover:text-indigo-600 transition duration-500 ease-in-out;
+    }
+
+    p {
+      @apply text-gray-700 text-base leading-6;
+    }
+
+    .inner {
+      @apply flex items-center gap-4 py-2;
+
+      a {
+        @apply text-sm;
+
+        span {
+          @apply text-sm;
+        }
+      }
+
+      span {
+        @apply text-sm;
+      }
+    }
+  }
+}
+
+article {
+  h3 {
+    @apply text-[2rem] pt-3 text-black font-semibold;
+  }
+
+  h4 {
+    @apply text-2xl pt-3 text-black font-normal;
+  }
+
+  h5 {
+    @apply text-2xl py-3 text-indigo-500 font-normal;
+  }
+
+  img {
+    @apply mb-2;
+  }
+
+  a {
+    @apply transition-all text-[#ff89ba] border-b-[1px] border-dotted border-[#ff89ba];
+  }
+
+  pre {
+    code {
+      @apply bg-slate-200 py-1 px-2 rounded text-base w-full flex items-center min-h-10 lg:overflow-hidden overflow-x-scroll;
+    }
+  }
+
+  p {
+    @apply text-lg py-3;
+
+    code {
+      @apply bg-[#ffd8e8] rounded py-1 px-2;
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li {
+      @apply ml-5 mt-3;
+    }
+  }
+
+  ul {
+    @apply flex flex-wrap;
+
+    li {
+      @apply mt-1 mr-2;
+
+      a {
+        @apply font-normal text-sm px-3 h-7 flex items-center transition-all rounded bg-white text-black border-[1px] border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500;
+      }
+    }
+  }
+
+  table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    table-layout: fixed;
+    @apply md:border-0 m-0 p-0 w-full my-3;
+
+    tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 0.35em;
+    }
+
+    th,
+    td {
+      padding: 0.625em;
+      border-right: 1px solid #ddd;
+    }
+
+    th {
+      font-size: 0.85em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-right: 1px solid #ddd;
+    }
+
+    @media screen and (max-width: 600px) {
+      thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+      }
+
+      td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: left;
+      }
+
+      td::before {
+        /*
+              * aria-label has no advantage, it won't be read inside a table
+              content: attr(aria-label);
+              */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      td:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.rightpost {
+  @apply relative lg:my-8 md:my-6 my-4;
+
+  .title {
+    @apply relative flex items-center justify-between h-7 mb-7;
+
+    h3 {
+      @apply h-7 px-3 py-1 bg-indigo-600 uppercase relative w-auto font-semibold text-sm text-white;
+    }
+
+    &::before {
+      content: '';
+      @apply absolute right-0 h-[2px] bg-[#ff80b5] w-full top-2/4;
+      transform: translateY(-50%);
+    }
+  }
+
+  .follow {
+    ul {
+      @apply grid grid-cols-2 gap-2;
+
+      li {
+        a {
+          @apply h-8 flex items-center justify-between overflow-hidden text-white font-normal text-base;
+
+          .icon {
+            @apply flex items-center justify-center w-8 h-full flex-shrink-0;
+            background-color: rgba(255, 255, 255, 0.158);
+          }
+
+          .text {
+            @apply text-sm px-4;
+          }
+        }
+      }
+    }
+  }
+
+  .tag {
+    ul {
+      @apply flex flex-wrap;
+
+      li {
+        @apply mt-1 mr-2;
+
+        a {
+          @apply font-normal text-sm px-3 h-7 flex items-center transition-all rounded bg-white text-black border-[1px] border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500;
+        }
+      }
+    }
+  }
+
+  .catgeory {
+    ul {
+      li {
+        a {
+          @apply pb-4 hover:text-indigo-500 transition-all flex justify-between items-center;
+        }
+      }
+    }
+  }
+
+  .ads {
+    @apply h-16 text-sm italic;
+  }
+}
+
+.course-card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease-in-out;
+
+  &-img {
+    border-radius: 25px 25px 0px 0px;
+
+    & .main {
+      object-fit: cover;
+      z-index: 1;
+      transition: 0.25s ease-in-out;
+    }
+
+    & .layered {
+      height: 120px;
+      width: 130px;
+      position: absolute;
+      filter: blur(19px);
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    .course-card-img {
+      & .main {
+        transform: scale(1.1);
+      }
+
+      & .layered {
+        filter: blur(19);
+        transform: scale(1.5);
+      }
+    }
+  }
+}

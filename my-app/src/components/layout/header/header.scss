@@ -1,0 +1,116 @@
+.header {
+  .hero {
+    @apply relative isolate;
+
+    .bg1 {
+      @apply absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80;
+
+      .icon {
+        @apply relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem];
+        clip-path: polygon(
+          74.1% 44.1%,
+          100% 61.6%,
+          97.5% 26.9%,
+          85.5% 0.1%,
+          80.7% 2%,
+          72.5% 32.5%,
+          60.2% 62.4%,
+          52.4% 68.1%,
+          47.5% 58.3%,
+          45.2% 34.5%,
+          27.5% 76.7%,
+          0.1% 64.9%,
+          17.9% 100%,
+          27.6% 76.8%,
+          76.1% 97.7%,
+          74.1% 44.1%
+        );
+      }
+    }
+    // .text {
+    //   @apply ;
+    // }
+  }
+}
+
+.header {
+  .navbar {
+    @apply absolute inset-x-0 top-0 z-50;
+
+    nav {
+      @apply flex items-center md:justify-start justify-between py-2;
+
+      .logo {
+        @apply flex mr-10;
+
+        a {
+          @apply -m-1.5 p-1.5;
+
+          span {
+            @apply sr-only;
+          }
+        }
+      }
+
+      .menubutton {
+        @apply flex lg:hidden;
+
+        button {
+          @apply -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700;
+
+          span {
+            @apply sr-only;
+          }
+
+          .icon {
+            @apply h-6 w-6;
+          }
+        }
+      }
+
+      .menu {
+        @apply hidden lg:flex lg:gap-x-12;
+
+        a {
+          @apply text-sm font-semibold leading-6 textld hover:text-indigo-600;
+        }
+      }
+    }
+  }
+
+  .hero {
+    .text {
+      .firstPart {
+        @apply hidden sm:mb-8 sm:flex sm:justify-center;
+
+        .inner {
+          @apply relative rounded-full px-3 py-1 text-sm leading-6 textld;
+
+          a {
+            @apply font-semibold text-indigo-700;
+
+            span {
+              @apply absolute inset-0 ;
+            }
+          }
+        }
+      }
+
+      .secondPart {
+        @apply text-center;
+
+        h1 {
+          @apply text-4xl font-bold tracking-tight textld sm:text-6xl capitalize;
+        }
+
+        p {
+          @apply mt-6 text-lg leading-8 text-gray-600;
+        }
+
+        .btn-group {
+          @apply mt-10 flex items-center justify-center gap-x-6;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.quiz {
+  box-shadow: 0 20px 63px -60px #000000;
+  background: rgba(225, 221, 245, 0.473);
+  border-radius: 10px;
+  padding: 5px 20px 10px;
+  margin: 0 auto 54px;
+  padding-top: 20px;
+  overflow-y: hidden;
+
+  h2 {
+    @apply lg:text-2xl text-xl font-semibold py-2;
+  }
+
+  .option {
+    ul {
+      li {
+        @apply rounded list-none py-3 my-4 mx-3 px-4;
+        background: aliceblue;
+        border: 1px solid #84c5fe;
+      }
+    }
+  }
+
+  span {
+    @apply text-xl pt-4 font-semibold text-blue-600;
+  }
+
+  p {
+    @apply mb-5;
+  }
+
+  .tag {
+    ul {
+      @apply flex gap-4 rounded;
+
+      li {
+        @apply rounded list-none py-1 px-2;
+        background: aliceblue;
+        border: 1px solid #84c5fe;
+      }
+    }
+  }
+}

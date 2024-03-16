@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@/src/components/layout/header/header.scss';
+@import '@/src/components/quiz/book/Bookcards.scss';
+@import '@/src/components/quiz/heading1/heading1card.scss';
+@import '@/src/components/quiz/heading2/heading2card.scss';
+@import '@/src/components/quiz/country/countrycard.scss';
+@import '@/src/components/quiz/question/form/quizQuestionForm.scss';
+@import '@/src/components/quiz/question/quiz/quizquestionstructure.scss';
+
+@import '@/src/components/cards/cardComponent.scss';
+@import '@/src/styles/article/blogs.scss';
+@import '@/src/styles/article/catgeory.scss';
+
+// social icon
+@layer components {
+  .bg-facebook {
+    background-color: #3b5999;
+  }
+
+  .bg-twitter {
+    background-color: #00acee;
+  }
+
+  .bg-youtube {
+    background-color: #f50000;
+  }
+
+  .bg-instagram {
+    background: linear-gradient(15deg, #ffb13d, #dd277b, #4d5ed4);
+  }
+  .textld {
+    @apply dark:text-white text-gray-900;
+  }
+  .inputld {
+    @apply outline-none flex-auto rounded-md border-0 dark:bg-white/5 px-3.5 py-2 textld shadow-sm ring-1 ring-inset dark:ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6;
+  }
+}
+
+.btn1 {
+  @apply rounded-md text-sm font-semibold text-white shadow-sm bg-indigo-600 hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+}
+
+.btn2 {
+  @apply text-sm font-semibold leading-6 text-gray-900;
+}
+
+.navbar-fixed {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  @apply dark:bg-gray-900 bg-white;
+}
+
+/* Optional: Change navbar styles when scrolled */
+.navbar-fixed.header-scrolled {
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
